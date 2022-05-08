@@ -1,4 +1,4 @@
-import { StyledContainer, StyledDiv } from "./hero.styles";
+import { StyledImageContainer, StyledInfoContainer } from "./hero.styles";
 
 import { Typography, Container, Grid, CardMedia, Button } from "@mui/material";
 import heroImage from "../../assets/desktop/image-hero@2x.jpg";
@@ -8,19 +8,18 @@ import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg"
 const Hero = () => {
   return (
     <>
-      <StyledContainer>
+      <StyledImageContainer>
         <CardMedia
           component="img"
           image={heroImage}
           alt="hero"
           sx={{
-            height: "800px",
             width: "auto",
           }}
         />
-      </StyledContainer>
+      </StyledImageContainer>
 
-      <StyledDiv container columnSpacing={8}>
+      <StyledInfoContainer container columnSpacing={8}>
         <Grid sm={6} item>
           <Typography variant="h1">
             Modern <br /> Art Gallery
@@ -34,7 +33,7 @@ const Hero = () => {
           </Typography>
           <ButtonComp text="Our Location" arrow={<RightArrow />} />
         </Grid>
-      </StyledDiv>
+      </StyledInfoContainer>
     </>
   );
 };

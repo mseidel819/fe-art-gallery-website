@@ -18,10 +18,18 @@ export const theme = createTheme({
     h2: {
       fontSize: "70px",
       lineHeight: "70px",
+      fontWeight: "900",
+      textTransform: "uppercase",
+      fontFamily: "Big Shoulders Display",
+      marginBottom: "32px",
     },
     h3: {
       fontSize: "60px",
       lineHeight: "50px",
+      fontWeight: "900",
+      textTransform: "uppercase",
+      fontFamily: "Big Shoulders Display",
+      marginBottom: "32px",
     },
     h4: {
       fontSize: "36px",
@@ -41,6 +49,9 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#151515",
+    },
+    tertiary: {
+      main: "white",
     },
   },
 });
