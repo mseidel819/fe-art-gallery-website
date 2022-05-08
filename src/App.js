@@ -1,25 +1,37 @@
 import "./App.css";
 import { styled, ThemeProvider, createTheme } from "@mui/material/styles";
 import { Typography, Container, Grid, CardMedia, Button } from "@mui/material";
-import heroImage from "./assets/desktop/image-hero@2x.jpg";
+import MainPage from "./pages/main-page/main-page.component";
 
-const theme = createTheme({
+export const theme = createTheme({
   typography: {
     h1: {
       fontSize: "96px",
-      lineSpacing: "88px",
+      lineHeight: "88px",
+      fontWeight: "900",
+      textTransform: "uppercase",
+      fontFamily: "Big Shoulders Display",
+      color: "white",
+      mixBlendMode: "screen",
+      textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     },
     h2: {
       fontSize: "70px",
-      lineSpacing: "70px",
+      lineHeight: "70px",
     },
     h3: {
       fontSize: "60px",
-      lineSpacing: "50px",
+      lineHeight: "50px",
     },
     h4: {
       fontSize: "36px",
-      lineSpacing: "36px",
+      lineHeight: "36px",
+    },
+    p: {
+      fontFamily: "Outfit",
+      fontWeight: 400,
+      fontSize: "22px",
+      lineHeight: "32px",
     },
   },
   palette: {
@@ -32,47 +44,10 @@ const theme = createTheme({
   },
 });
 
-const StyledContainer = styled("div")({
-  display: "flex",
-  justifyContent: "flex-end",
-  width: "75%",
-  backgroundColor: "#111",
-  filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
-});
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <StyledContainer>
-        <CardMedia
-          component="img"
-          image={heroImage}
-          alt="hero"
-          sx={{
-            height: "800px",
-            width: "auto",
-          }}
-        />
-      </StyledContainer>
-      <Grid container>
-        <Grid item>
-          <Typography variant="h1" fontWeight={700}>
-            Modern Art Gallery
-          </Typography>
-        </Grid>
-        <Grid container item>
-          <Grid item>
-            <Typography variant="p">
-              The arts in the collection of the Modern Art Gallery all started
-              from a spark of inspiration. Will these pieces inspire you? Visit
-              us and find out.
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Button>click</Button>
-          </Grid>
-        </Grid>
-      </Grid>{" "}
+      <MainPage />
     </ThemeProvider>
   );
 }
