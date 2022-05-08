@@ -29,9 +29,10 @@ export const theme = createTheme({
     },
     p: {
       fontFamily: "Outfit",
-      fontWeight: 400,
+      fontWeight: "300",
       fontSize: "22px",
       lineHeight: "32px",
+      color: "#444444",
     },
   },
   palette: {

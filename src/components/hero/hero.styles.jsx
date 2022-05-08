@@ -5,9 +5,8 @@ export const StyledDiv = styled(Grid)({
   width: "87%",
   margin: "0 auto",
   display: "flex",
-
   justifyContent: "space-between",
-  transform: "translate(0, -610px)",
+  transform: "translate(0, -660px)",
 });
 export const StyledContainer = styled("div")({
   display: "flex",
@@ -15,4 +14,5 @@ export const StyledContainer = styled("div")({
   width: "75%",
   backgroundColor: "#111",
   filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
+  transform: "translate(0, -50px)",
 });
