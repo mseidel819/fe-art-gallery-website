@@ -34,6 +34,9 @@ export const theme = createTheme({
     h4: {
       fontSize: "36px",
       lineHeight: "36px",
+      fontWeight: "900",
+      textTransform: "uppercase",
+      fontFamily: "Big Shoulders Display",
     },
     p: {
       fontFamily: "Outfit",

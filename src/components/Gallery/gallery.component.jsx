@@ -8,7 +8,7 @@ const Gallery = () => {
     <Grid
       container
       spacing={3}
-      sx={{ width: "80%", margin: "0 auto", marginTop: "100px" }}
+      sx={{ width: "80%", margin: "180px auto", marginTop: "100px" }}
     >
       <Grid container item spacing={6} alignItems="center">
         <Grid item md={5}>
