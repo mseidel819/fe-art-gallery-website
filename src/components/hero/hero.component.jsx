@@ -1,17 +1,26 @@
 import { StyledImageContainer, StyledInfoContainer } from "./hero.styles";
 
 import { Typography, Container, Grid, CardMedia, Button } from "@mui/material";
-import heroImage from "../../assets/desktop/image-hero@2x.jpg";
+import heroImageDesktop from "../../assets/desktop/image-hero@2x.jpg";
+import heroImageTablet from "../../assets/tablet/image-hero@2x.jpg";
+import heroImageMobile from "../../assets/mobile/image-hero@2x.jpg";
+
 import ButtonComp from "../Button/button.component";
 import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg";
 
-const Hero = () => {
+const Hero = ({ size }) => {
   return (
     <>
       <StyledImageContainer>
         <CardMedia
           component="img"
-          image={heroImage}
+          image={
+            size === "desktop"
+              ? heroImageDesktop
+              : size === "tablet"
+              ? heroImageTablet
+              : heroImageMobile
+          }
           alt="hero"
           sx={{
             width: "auto",
