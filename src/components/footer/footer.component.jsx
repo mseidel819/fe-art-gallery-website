@@ -10,28 +10,36 @@ const Footer = ({ bkgColor, color, hoverColor }) => {
       maxWidth="100%"
       sx={{
         backgroundColor: `${bkgColor}`,
-        height: "244px",
+        // height: "244px",
         padding: "80px",
         display: "flex",
         justifyContent: "center",
       }}
     >
-      <Grid container maxWidth="85%">
-        <Grid item lg={4}>
+      <Grid container maxWidth="85%" spacing={4}>
+        <Grid item lg={4} md={2} xs={12}>
           <Typography color={color} variant="h4">
             Modern <br />
             Art Gallery
           </Typography>
         </Grid>
 
-        <Grid item lg={5}>
+        <Grid item lg={5} md={6} xs={12}>
           <Typography color={color} variant="p" fontSize="18px">
             The Modern Art Gallery is free to all visitors and open seven days a
             week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
           </Typography>
         </Grid>
 
-        <Grid item container color={color} justifyContent="center" lg={3}>
+        <Grid
+          item
+          container
+          color={color}
+          justifyContent="center"
+          lg={3}
+          md={4}
+          xs={12}
+        >
           <Link href="#" aria-label="facebook">
             <FacebookIcon
               sx={{ color: `${color}`, "&:hover": { color: `${hoverColor}` } }}
