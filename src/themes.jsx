@@ -34,6 +34,7 @@ export const theme = createTheme({
       fontWeight: "900",
       textTransform: "uppercase",
       fontFamily: "Big Shoulders Display",
+      marginBottom: "32px",
     },
     p: {
       fontFamily: "Outfit",

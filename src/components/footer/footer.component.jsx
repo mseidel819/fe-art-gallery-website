@@ -4,39 +4,48 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-const Footer = ({ bkgColor, color, hoverColor }) => {
+const Footer = ({ bkgColor, color, hoverColor, size }) => {
+  const margins =
+    size === "desktop" ? "80%" : size === "tablet" ? "95%" : "95%";
+
   return (
     <Container
       maxWidth="100%"
       sx={{
         backgroundColor: `${bkgColor}`,
         // height: "244px",
-        padding: "80px",
+        padding: "80px 0",
         display: "flex",
         justifyContent: "center",
       }}
     >
-      <Grid container maxWidth="85%" spacing={4}>
-        <Grid item lg={4} md={2} xs={12}>
-          <Typography color={color} variant="h4">
-            Modern <br />
-            Art Gallery
-          </Typography>
-        </Grid>
+      <Grid
+        container
+        maxWidth={margins}
+        spacing={4}
+        justifyContent="space-between"
+      >
+        <Grid container item lg={10} md={8}>
+          <Grid item lg={4} md={6} xs={12}>
+            <Typography color={color} variant="h4">
+              Modern <br />
+              Art Gallery
+            </Typography>
+          </Grid>
 
-        <Grid item lg={5} md={6} xs={12}>
-          <Typography color={color} variant="p" fontSize="18px">
-            The Modern Art Gallery is free to all visitors and open seven days a
-            week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
-          </Typography>
+          <Grid item lg={6} md={6} xs={12}>
+            <Typography color={color} variant="p" fontSize="18px">
+              The Modern Art Gallery is free to all visitors and open seven days
+              a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
+            </Typography>
+          </Grid>
         </Grid>
-
         <Grid
           item
           container
           color={color}
-          justifyContent="center"
-          lg={3}
+          justifyContent={size === "mobile" ? "left" : "right"}
+          lg={2}
           md={4}
           xs={12}
         >

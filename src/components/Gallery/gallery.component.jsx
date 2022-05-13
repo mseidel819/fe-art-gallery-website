@@ -12,11 +12,14 @@ import galleryImageTablet3 from "../../assets/tablet/image-grid-3@2x.jpg";
 import galleryImageMobile3 from "../../assets/mobile/image-grid-3@2x.jpg";
 
 const Gallery = ({ size }) => {
+  const margins =
+    size === "desktop" ? "80%" : size === "tablet" ? "90%" : "95%";
+
   return (
     <Grid
       container
       spacing={3}
-      sx={{ width: "80%", margin: "180px auto", marginTop: "100px" }}
+      sx={{ width: `${margins}`, margin: "180px auto", marginTop: "100px" }}
     >
       <Grid container item spacing={6} alignItems="center">
         <Grid item md={5}>

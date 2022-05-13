@@ -7,7 +7,12 @@ const MainPage = ({ size }) => {
     <>
       <Hero size={size} />
       <Gallery size={size} />
-      <Footer bkgColor={"#151515"} color={"white"} hoverColor={"#d5966c"} />
+      <Footer
+        bkgColor={"#151515"}
+        color={"white"}
+        hoverColor={"#d5966c"}
+        size={size}
+      />
     </>
   );
 };
