@@ -18,12 +18,18 @@ const Gallery = ({ size }) => {
   return (
     <Grid
       container
-      spacing={3}
-      sx={{ width: `${margins}`, margin: "180px auto", marginTop: "100px" }}
+      spacing={size === "mobile" ? 0 : 3}
+      sx={{ width: `${margins}`, margin: "100px auto", marginBottom: "180px" }}
     >
-      <Grid container item spacing={6} alignItems="center">
+      <Grid
+        container
+        item
+        spacing={3}
+        alignItems="center"
+        direction={size === "mobile" ? "column-reverse" : "row"}
+      >
         <Grid item md={5}>
-          <Box sx={{ backgroundColor: "white" }}>
+          <Box sx={{ backgroundColor: "white", marginBottom: "32px" }}>
             <Typography variant="h2">Your day at the gallery</Typography>
             <Typography variant="p">
               Wander through our distinct collections and find new insights
@@ -68,6 +74,7 @@ const Gallery = ({ size }) => {
           direction="column"
           justifyContent="space-between"
           item
+          spacing={3}
           md={5}
         >
           <Grid item>
