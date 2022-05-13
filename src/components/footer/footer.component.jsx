@@ -25,15 +25,15 @@ const Footer = ({ bkgColor, color, hoverColor, size }) => {
         spacing={4}
         justifyContent="space-between"
       >
-        <Grid container item lg={10} md={8}>
-          <Grid item lg={4} md={6} xs={12}>
+        <Grid container item lg={10} sm={8}>
+          <Grid item lg={4} sm={6} xs={12}>
             <Typography color={color} variant="h4">
               Modern <br />
               Art Gallery
             </Typography>
           </Grid>
 
-          <Grid item lg={6} md={6} xs={12}>
+          <Grid item lg={6} sm={6} xs={12}>
             <Typography color={color} variant="p" fontSize="18px">
               The Modern Art Gallery is free to all visitors and open seven days
               a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
@@ -46,7 +46,7 @@ const Footer = ({ bkgColor, color, hoverColor, size }) => {
           color={color}
           justifyContent={size === "mobile" ? "left" : "right"}
           lg={2}
-          md={4}
+          sm={4}
           xs={12}
         >
           <Link href="#" aria-label="facebook">

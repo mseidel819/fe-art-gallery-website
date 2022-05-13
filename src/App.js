@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { theme } from "./themes";
+import { theme, responsiveTheme } from "./themes";
 import { ThemeProvider } from "@mui/material/styles";
 import MainPage from "./pages/main-page/main-page.component";
 
@@ -8,7 +8,7 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const assetRoute =
-    windowWidth >= 1200 ? "desktop" : windowWidth >= 900 ? "tablet" : "mobile";
+    windowWidth >= 1200 ? "desktop" : windowWidth >= 600 ? "tablet" : "mobile";
   console.log(assetRoute);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={assetRoute === "desktop" ? theme : responsiveTheme}>
       <MainPage size={assetRoute} />
     </ThemeProvider>
   );

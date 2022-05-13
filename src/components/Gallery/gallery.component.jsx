@@ -18,7 +18,7 @@ const Gallery = ({ size }) => {
   return (
     <Grid
       container
-      spacing={size === "mobile" ? 0 : 3}
+      rowSpacing={size === "mobile" ? 0 : 3}
       sx={{ width: `${margins}`, margin: "100px auto", marginBottom: "180px" }}
     >
       <Grid
@@ -28,7 +28,7 @@ const Gallery = ({ size }) => {
         alignItems="center"
         direction={size === "mobile" ? "column-reverse" : "row"}
       >
-        <Grid item md={5}>
+        <Grid item sm={5}>
           <Box sx={{ backgroundColor: "white", marginBottom: "32px" }}>
             <Typography variant="h2">Your day at the gallery</Typography>
             <Typography variant="p">
@@ -39,7 +39,7 @@ const Gallery = ({ size }) => {
           </Box>
         </Grid>
 
-        <Grid item md={7}>
+        <Grid item sm={7}>
           <CardMedia
             component="img"
             image={
@@ -54,8 +54,8 @@ const Gallery = ({ size }) => {
         </Grid>
       </Grid>
 
-      <Grid spacing={3} container item md={12}>
-        <Grid item md={7}>
+      <Grid columnSpacing={3} container item sm={12}>
+        <Grid item sm={7}>
           <CardMedia
             component="img"
             image={
@@ -74,8 +74,8 @@ const Gallery = ({ size }) => {
           direction="column"
           justifyContent="space-between"
           item
-          spacing={3}
-          md={5}
+          rowSpacing={3}
+          sm={5}
         >
           <Grid item>
             <CardMedia
@@ -83,7 +83,7 @@ const Gallery = ({ size }) => {
               image={
                 size === "desktop"
                   ? galleryImage3
-                  : size === "mobile"
+                  : size === "tablet"
                   ? galleryImageTablet3
                   : galleryImageMobile3
               }
