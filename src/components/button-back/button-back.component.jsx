@@ -1,8 +1,4 @@
-import {
-  StyledButton,
-  StyledArrowSpan,
-  StyledTextSpan,
-} from "./button-back.styles";
+import { StyledButton } from "./button-back.styles";
 
 import { ReactComponent as LeftArrow } from "../../assets/icon-arrow-left.svg";
 

@@ -1,5 +1,4 @@
-import { ButtonGroup } from "@mui/material";
-import { StyledButton, StyledArrowSpan, StyledTextSpan } from "./button.styles";
+import { StyledButton } from "./button.styles";
 import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg";
 
 const ButtonComp = ({ buttonHandler }) => {
