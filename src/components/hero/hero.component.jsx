@@ -6,21 +6,15 @@ import heroImageTablet from "../../assets/tablet/image-hero@2x.jpg";
 import heroImageMobile from "../../assets/mobile/image-hero@2x.jpg";
 
 import ButtonComp from "../Button/button.component";
-import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg";
 
-const Hero = ({ size }) => {
+const Hero = ({ size, buttonHandler }) => {
   return (
     <>
       <Grid
         container
         sx={{ display: `${size === "mobile" ? "none" : "flex"}` }}
       >
-        <Grid
-          item
-          lg={3.5}
-          sm={"none"}
-          sx={{ backgroundColor: "#151515" }}
-        ></Grid>
+        <Grid item lg={3.5} sm={0} sx={{ backgroundColor: "#151515" }}></Grid>
         <Grid item lg={5} sm={7} sx={{ position: "relative" }}>
           <CardMedia
             component="img"
@@ -64,7 +58,7 @@ const Hero = ({ size }) => {
               from a spark of inspiration. Will these pieces inspire you? Visit
               us and find out.
             </Typography>
-            <ButtonComp text="Our Location" arrow={<RightArrow />} />
+            <ButtonComp buttonHandler={buttonHandler} />
           </Grid>
         </StyledInfoContainer>
       </Grid>

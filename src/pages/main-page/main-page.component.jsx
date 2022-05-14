@@ -2,10 +2,10 @@ import Hero from "../../components/hero/hero.component";
 import Gallery from "../../components/Gallery/gallery.component";
 import Footer from "../../components/footer/footer.component";
 
-const MainPage = ({ size }) => {
+const MainPage = ({ size, buttonHandler }) => {
   return (
     <>
-      <Hero size={size} />
+      <Hero buttonHandler={buttonHandler} size={size} />
       <Gallery size={size} />
       <Footer
         bkgColor={"#151515"}

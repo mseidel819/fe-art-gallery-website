@@ -1,11 +1,14 @@
 import { ButtonGroup } from "@mui/material";
 import { StyledButton, StyledArrowSpan, StyledTextSpan } from "./button.styles";
+import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg";
 
-const ButtonComp = ({ text, arrow }) => {
+const ButtonComp = ({ buttonHandler }) => {
   return (
-    <StyledButton variant="contained">
-      <span className="textSpan">{text}</span>
-      <span className="arrowSpan">{arrow}</span>
+    <StyledButton onClick={() => buttonHandler()} variant="contained">
+      <span className="textSpan">Our Location</span>
+      <span className="arrowSpan">
+        <RightArrow />
+      </span>
     </StyledButton>
   );
 };
