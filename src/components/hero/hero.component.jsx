@@ -1,6 +1,4 @@
-import { StyledImageContainer, StyledInfoContainer } from "./hero.styles";
-
-import { Typography, Container, Grid, CardMedia, Button } from "@mui/material";
+import { Typography, Grid, CardMedia } from "@mui/material";
 import heroImageDesktop from "../../assets/desktop/image-hero@2x.jpg";
 import heroImageTablet from "../../assets/tablet/image-hero@2x.jpg";
 import heroImageMobile from "../../assets/mobile/image-hero@2x.jpg";

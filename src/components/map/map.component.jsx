@@ -1,4 +1,4 @@
-import { CardMedia, Container, Grid } from "@mui/material";
+import { CardMedia, Grid } from "@mui/material";
 
 import ImageMapDesktop from "../../assets/desktop/image-map@2x.png";
 import ImageMapTablet from "../../assets/tablet/image-map@2x.png";
