@@ -9,7 +9,7 @@ import ButtonBack from "../button-back/button-back.component";
 const Map = ({ size, buttonHandler }) => {
   return (
     <>
-      <div sx={{ position: "relative", margin: 0 }}>
+      <div>
         <CardMedia
           component="img"
           image={
@@ -22,17 +22,17 @@ const Map = ({ size, buttonHandler }) => {
           alt="location map"
         />
       </div>
-      <Container
+      <Grid
         sx={{
           top: 0,
           position: "absolute",
           marginLeft: `${
-            size === "desktop" ? "150px" : size === "tablet" ? "50px" : "-20px"
+            size === "desktop" ? "150px" : size === "tablet" ? "50px" : "0px"
           }`,
         }}
       >
         <ButtonBack buttonHandler={buttonHandler} />
-      </Container>
+      </Grid>
     </>
   );
 };
