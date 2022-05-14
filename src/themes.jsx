@@ -8,8 +8,9 @@ export const theme = createTheme({
       fontWeight: "900",
       textTransform: "uppercase",
       fontFamily: "Big Shoulders Display",
-      color: "black",
-      mixBlendMode: "screen",
+      color: "white",
+
+      mixBlendMode: "difference",
       textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     },
     h2: {
@@ -66,8 +67,7 @@ export const responsiveTheme = createTheme({
       textTransform: "uppercase",
       fontFamily: "Big Shoulders Display",
       color: "black",
-      mixBlendMode: "screen",
-      // textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+
       marginBottom: "48px",
     },
     h2: {

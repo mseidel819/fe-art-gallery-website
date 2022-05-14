@@ -11,36 +11,34 @@ import { ReactComponent as RightArrow } from "../../assets/icon-arrow-right.svg"
 const Hero = ({ size }) => {
   return (
     <>
-      {/* <Grid container>
-        <Grid item lg={8}>
-          <StyledImageContainer>
-            <CardMedia
-              component="img"
-              image={
-                size === "desktop"
-                  ? heroImageDesktop
-                  : size === "tablet"
-                  ? heroImageTablet
-                  : heroImageMobile
-              }
-              alt="hero"
-              sx={{
-                width: "auto",
-              }}
-            />
-          </StyledImageContainer>
+      <Grid
+        container
+        sx={{ display: `${size === "mobile" ? "none" : "flex"}` }}
+      >
+        <Grid
+          item
+          lg={3.5}
+          sm={"none"}
+          sx={{ backgroundColor: "#151515" }}
+        ></Grid>
+        <Grid item lg={5} sm={7} sx={{ position: "relative" }}>
+          <CardMedia
+            component="img"
+            image={size === "desktop" ? heroImageDesktop : heroImageTablet}
+          />
         </Grid>
-        <Grid item lg={4}></Grid>
-      </Grid> */}
+      </Grid>
+
       <Grid
         container
         justifyContent={size === "tablet" ? "right" : "center"}
-        sx={
-          {
-            // width: `${size === "desktop" ? "90%" : "95%"}`,
-            // margin: "150px auto",
-          }
-        }
+        sx={{
+          top: 0,
+          position: `${size === "mobile" ? "static" : "absolute"}`,
+          transform: `${
+            size === "mobile" ? "translateY(0)" : "translateY(130px)"
+          }`,
+        }}
       >
         <Grid item sx={{ display: { xs: "block", sm: "none" } }}>
           <CardMedia component="img" image={heroImageMobile} alt="hero image" />
