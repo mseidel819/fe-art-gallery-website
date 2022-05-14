@@ -37,7 +37,7 @@ const Hero = ({ size, buttonHandler }) => {
         <Grid item sx={{ display: { xs: "block", sm: "none" } }}>
           <CardMedia component="img" image={heroImageMobile} alt="hero image" />
         </Grid>
-        <StyledInfoContainer
+        <Grid
           container
           item
           columnSpacing={0}
@@ -60,7 +60,7 @@ const Hero = ({ size, buttonHandler }) => {
             </Typography>
             <ButtonComp buttonHandler={buttonHandler} />
           </Grid>
-        </StyledInfoContainer>
+        </Grid>
       </Grid>
     </>
   );
