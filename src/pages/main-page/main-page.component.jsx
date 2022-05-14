@@ -5,9 +5,10 @@ import Footer from "../../components/footer/footer.component";
 const MainPage = ({ size, buttonHandler }) => {
   return (
     <>
-      <Hero buttonHandler={buttonHandler} size={size} />
-      <Gallery size={size} />
+      <Hero role="banner" buttonHandler={buttonHandler} size={size} />
+      <Gallery role="main" size={size} />
       <Footer
+        role="contentinfo"
         bkgColor={"#151515"}
         color={"white"}
         hoverColor={"#d5966c"}

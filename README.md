@@ -51,4 +51,4 @@ I also need help with the coloring of the title in the hero. It uses some sort o
 ## Author
 
 - Website - [Matt Seidel](https://seidelmatt.com/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/mseidel819)
+- Frontend Mentor - [@mseidel819](https://www.frontendmentor.io/profile/mseidel819)

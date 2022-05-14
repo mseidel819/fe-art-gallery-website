@@ -5,9 +5,10 @@ import MapText from "../../components/map-text/map-text.component";
 const LocationPage = ({ size, buttonHandler }) => {
   return (
     <>
-      <Map buttonHandler={buttonHandler} size={size} />
-      <MapText size={size} />
+      <Map role="banner" buttonHandler={buttonHandler} size={size} />
+      <MapText role="main" size={size} />
       <Footer
+        role="contentinfo"
         bkgColor={"#d5966c"}
         color={"#151515"}
         hoverColor={"white"}

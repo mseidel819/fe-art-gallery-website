@@ -12,11 +12,12 @@ const Hero = ({ size, buttonHandler }) => {
         container
         sx={{ display: `${size === "mobile" ? "none" : "flex"}` }}
       >
-        <Grid item lg={3.5} sm={0} sx={{ backgroundColor: "#151515" }}></Grid>
-        <Grid item lg={5} sm={7} sx={{ position: "relative" }}>
+        <Grid item lg={4} sm={0} sx={{ backgroundColor: "#151515" }}></Grid>
+        <Grid item lg={4} sm={7} sx={{ position: "relative" }}>
           <CardMedia
             component="img"
             image={size === "desktop" ? heroImageDesktop : heroImageTablet}
+            alt="hero image"
           />
         </Grid>
       </Grid>
